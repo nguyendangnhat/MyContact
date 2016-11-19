@@ -91,9 +91,15 @@ public class FilterActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
         finish();
-        super.onBackPressed();
+        super.onDestroy();
     }
 }

@@ -24,14 +24,14 @@
         android:id="@+id/content_update_group"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.design.widget.TextInputLayout
-            android:layout_margin="@dimen/margin"
             android:id="@+id/text_input_layout_group_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin">
 
             <EditText
                 android:id="@+id/edit_text_group_name"
@@ -41,45 +41,44 @@
         </android.support.design.widget.TextInputLayout>
 
         <TextView
-            android:text="Thành viên"
-            android:paddingLeft="@dimen/margin"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:background="#eeeeee"
             android:layout_height="wrap_content"
-            android:id="@+id/textView" />
+            android:background="#eeeeee"
+            android:paddingLeft="@dimen/margin"
+            android:text="Thành viên" />
 
         <LinearLayout
             android:id="@+id/linear_layout_add_contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/margin"
             android:background="?android:selectableItemBackground"
             android:clickable="true"
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/contact_avatar"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:padding="12dp"
-                app:srcCompat="@drawable/ic_add_white"
+                android:layout_margin="@dimen/margin"
                 android:background="@drawable/tron"
-                android:id="@+id/contact_avatar" />
+                android:padding="12dp"
+                app:srcCompat="@drawable/ic_add_white" />
 
             <TextView
-                android:text="Thêm thành viên"
-                android:layout_marginLeft="@dimen/margin"
+                android:id="@+id/contact_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/contact_name"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1" />
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_weight="1"
+                android:text="Thêm thành viên" />
 
         </LinearLayout>
 
         <ListView
             android:id="@+id/list_view"
             android:layout_width="match_parent"
-            android:layout_marginLeft="@dimen/margin"
             android:layout_height="match_parent" />
     </LinearLayout>
 

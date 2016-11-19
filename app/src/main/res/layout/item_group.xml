@@ -2,28 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@id/linear_layout_group"
     android:layout_width="match_parent"
-    android:layout_height="72dp"
-    android:orientation="horizontal"
+    android:layout_height="60dp"
     android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
     android:weightSum="1">
 
     <CheckBox
-        android:layout_marginLeft="@dimen/margin"
+        android:id="@+id/check_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="false"
         android:layout_gravity="center_vertical"
-        android:id="@+id/check_box" />
+        android:layout_marginLeft="@dimen/margin"
+        android:clickable="false" />
 
     <TextView
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_width="0dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_height="72dp"
-        android:layout_gravity="center_vertical"
-        android:gravity="center_vertical"
-        android:textSize="18sp"
         android:id="@+id/group_name"
-        android:layout_weight="1" />
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
 
 </LinearLayout>
