@@ -468,5 +468,12 @@ public class UpdateContactActivity extends AppCompatActivity {
         Bitmap bmAvatar = BitmapFactory.decodeByteArray(image, 0, image.length);
         return bmAvatar;
     }
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
+        super.onBackPressed();
+    }
 }
 

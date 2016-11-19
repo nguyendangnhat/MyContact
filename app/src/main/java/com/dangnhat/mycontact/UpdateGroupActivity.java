@@ -219,4 +219,11 @@ public class UpdateGroupActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
+        super.onBackPressed();
+    }
 }

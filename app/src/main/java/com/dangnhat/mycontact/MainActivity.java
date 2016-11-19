@@ -26,6 +26,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.widget.TextView;
 
+import com.dangnhat.mycontact.Model.Contact;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,13 +45,19 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.ic_star
     };*/
 
+
+    //bo loc
+    public static boolean phoneCheck;
+    public static boolean emailCheck;
+    public static boolean imCheck;
+    public static int groupID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -107,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         fab.hide();
     };
 
-    int[] colorIntArray = {R.color.colorAccent,R.color.colorAccent,R.color.colorAccent};
+    int[] colorIntArray = {R.color.colorPrimaryDark,R.color.colorPrimaryDark,R.color.colorAccent};
     int[] iconIntArray = {R.drawable.ic_person_add_white,R.drawable.ic_person_add_white,R.drawable.ic_group_add_white};
     protected void animateFab(final int position) {
         fab.clearAnimation();
@@ -163,6 +171,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_filter) {
+            Intent i = new Intent(this, FilterActivity.class);
+            startActivity(i);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -176,7 +189,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   /* private void setupTabIcons() {
+
+
+
+    /* private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
         tabLayout.getTabAt(2).setIcon(tabIcons[2]);

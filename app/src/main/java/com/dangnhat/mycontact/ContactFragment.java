@@ -36,6 +36,12 @@ public class ContactFragment extends Fragment {
     ContactWithHeaderAdapter adapter;
     private android.support.v7.view.ActionMode mActionMode;
 
+    public static boolean phoneCheck = false;
+    public static boolean emailCheck =false;
+    public static boolean imCheck = false;
+    public static int groupID = 0;
+
+
     public ContactFragment() {
         // Required empty public constructor
     }
@@ -77,25 +83,25 @@ public class ContactFragment extends Fragment {
         String SQL_ON_IM = " ";
         String SQL_ON_GROUP = " ";
 
-//            if(phoneCheck){
-//                SQL_PHONE = "INNER JOIN tbl_contact_phone ";
-//                SQL_ON_PHONE = "= tbl_contact_phone.contact_id ";
-//            }
-//            if(emailCheck){
-//                SQL_EMAIL = "INNER JOIN tbl_contact_email " ;
-//                SQL_ON_EMAIL = "= tbl_contact_email.contact_id ";
-//            }
-//            if(imCheck){
-//                SQL_IM = "INNER JOIN tbl_contact_im ";
-//                SQL_ON_IM = "= tbl_contact_im.contact_id ";
-//            }
-//            if(groupID != 0){
-//                SQL_GROUP =  "INNER JOIN tbl_contact_group ";
-//                SQL_ON_GROUP = "= tbl_contact_group.contact_id ";
-//            }
-//            if(phoneCheck || emailCheck || imCheck || groupID != 0){
-//                SQL_ON =  "ON tbl_contact.id ";
-//            }
+            if(phoneCheck){
+                SQL_PHONE = "INNER JOIN tbl_contact_phone ";
+                SQL_ON_PHONE = "= tbl_contact_phone.contact_id ";
+            }
+            if(emailCheck){
+                SQL_EMAIL = "INNER JOIN tbl_contact_email " ;
+                SQL_ON_EMAIL = "= tbl_contact_email.contact_id ";
+            }
+            if(imCheck){
+                SQL_IM = "INNER JOIN tbl_contact_im ";
+                SQL_ON_IM = "= tbl_contact_im.contact_id ";
+            }
+            if(groupID != 0){
+                SQL_GROUP =  "INNER JOIN tbl_contact_group ";
+                SQL_ON_GROUP = "= tbl_contact_group.contact_id ";
+            }
+            if(phoneCheck || emailCheck || imCheck || groupID != 0){
+                SQL_ON =  "ON tbl_contact.id ";
+            }
 
         String SQL_QUERY = "SELECT * FROM tbl_contact " +
                 SQL_PHONE +
@@ -119,7 +125,7 @@ public class ContactFragment extends Fragment {
 
             while (cursor.moveToNext())
             {
-                int id = cursor.getInt(idIndex);
+                int id = cursor.getInt(0);
                 String firstName = cursor.getString(firstNameIndex);
                 String lastName = cursor.getString(lastNameIndex);
                 byte[] avatar = cursor.getBlob(avatarIndex);

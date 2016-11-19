@@ -9,7 +9,6 @@
         android:id="@+id/list_view_group"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@null"
         android:layout_marginLeft="@dimen/margin"
         android:layout_marginRight="@dimen/margin"/>
     <TextView

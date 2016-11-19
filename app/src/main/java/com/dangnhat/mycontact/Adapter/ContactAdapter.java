@@ -1,6 +1,7 @@
 package com.dangnhat.mycontact.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import com.dangnhat.mycontact.Model.Contact;
 import com.dangnhat.mycontact.Model.Group;
 import com.dangnhat.mycontact.R;
+import com.dangnhat.mycontact.ViewContactActivity;
 import com.dangnhat.mycontact.data.ContactDBHelper;
 
 import java.util.ArrayList;
@@ -75,7 +77,7 @@ public class ContactAdapter extends BaseAdapter {
             itemContact = convertView;
         }
 
-        Contact contact = listContact.get(position);
+        final Contact contact = listContact.get(position);
 
         TextView txtName = (TextView) itemContact.findViewById(R.id.contact_name);
         txtName.setText(contact.getLastName() + " " + contact.getFirstName());
@@ -96,9 +98,9 @@ public class ContactAdapter extends BaseAdapter {
             itemContact.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent i = new Intent(context, ViewContactActivity.class);
-//                    i.putExtra("contactId", contactSlim.getContact().getId());
-//                    context.startActivity(i);
+                    Intent i = new Intent(context, ViewContactActivity.class);
+                    i.putExtra("contactId", contact.getId());
+                    context.startActivity(i);
                 }
             });
         }

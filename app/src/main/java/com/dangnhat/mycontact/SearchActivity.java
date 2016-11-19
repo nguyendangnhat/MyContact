@@ -1,5 +1,6 @@
 package com.dangnhat.mycontact;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -115,4 +116,11 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+        finish();
+        super.onBackPressed();
+    }
 }

@@ -1,5 +1,6 @@
 package com.dangnhat.mycontact;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -56,7 +58,7 @@ public class FavoriteFragment extends Fragment {
     }
 
     private void displayFavorite(){
-        ArrayList<Contact> listContact = new ArrayList<>();
+        final ArrayList<Contact> listContact = new ArrayList<>();
         SQLiteDatabase database = contactDBHelper.getReadableDatabase();
         String SQL_QUERY = "SELECT * FROM tbl_contact WHERE favorite != 0 ORDER BY first_name;";
         Cursor cursor = database.rawQuery(SQL_QUERY, null);
@@ -88,9 +90,10 @@ public class FavoriteFragment extends Fragment {
         }
         else {
             textViewNoFavotite.setVisibility(View.GONE);
-            ContactAdapter adapter = new ContactAdapter(getContext(), listContact);
+            final ContactAdapter adapter = new ContactAdapter(getContext(), listContact);
 
             listViewContact.setAdapter(adapter);
+
         }
 
     }

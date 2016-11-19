@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Contact</string>
+    <string name="app_name">Danh bạ</string>
     <string name="action_settings">Settings</string>
     <string name="action_search">Search</string>
     <string name="action_filter">Filter</string>
@@ -28,4 +28,5 @@
         <item>Tùy chỉnh</item>
     </string-array>
     <string name="title_activity_choose_group">ChooseGroupActivity</string>
+    <string name="title_activity_filter">FilterActivity</string>
 </resources>

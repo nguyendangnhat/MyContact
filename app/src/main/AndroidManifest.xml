@@ -5,6 +5,7 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
 
@@ -49,7 +50,7 @@
         <activity
             android:name=".ChooseGroupActivity"
             android:label="@string/title_activity_choose_group"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ViewContactActivity"
             android:parentActivityName=".MainActivity"
@@ -71,6 +72,15 @@
             android:label="Tìm kiếm"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.dangnhat.mycontact.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FilterActivity"
+            android:label="Lọc"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Dialog">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.dangnhat.mycontact.MainActivity" />
