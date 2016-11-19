@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Spinner
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+        android:id="@+id/spinner_name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:id="@+id/edit_text_value"
+        android:layout_gravity="bottom"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="23dp"
+        app:srcCompat="@drawable/ic_clear_black"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/image_view_delete" />
+</LinearLayout>

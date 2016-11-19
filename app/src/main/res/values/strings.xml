@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Contact</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_filter">Filter</string>
+    <string name="title_activity_update_group">UpdateGroupActivity</string>
+    <string name="title_activity_update_contact">UpdateContactActivity</string>
+    <string name="title_activity_choose_contact">ChooseContactActivity</string>
+    <string-array name="phone_name">
+        <item>Di động</item>
+        <item>Cơ quan</item>
+        <item>Nhà riêng</item>
+        <item>Số chính</item>
+        <item>Khác</item>
+        <item>Tùy chỉnh</item>
+    </string-array>
+    <string-array name="im_name">
+        <item>Facebook</item>
+        <item>Skype</item>
+        <item>Google Plus</item>
+    </string-array>
+
+    <string-array name="email_name">
+        <item>Nhà riêng</item>
+        <item>Công việc</item>
+        <item>Di động</item>
+        <item>Khác</item>
+        <item>Tùy chỉnh</item>
+    </string-array>
+    <string name="title_activity_choose_group">ChooseGroupActivity</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Chụp ảnh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:gravity="center_vertical"
+        android:background="?android:selectableItemBackground"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:id="@+id/chup_anh" />
+
+    <TextView
+        android:text="Chọn ảnh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item"
+        android:paddingRight="26dp"
+        android:paddingLeft="26dp"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/chon_anh" />
+</LinearLayout>

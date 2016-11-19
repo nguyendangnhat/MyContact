@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.dangnhat.mycontact.UpdateContactActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true" >
+        <LinearLayout
+            android:id="@+id/content_update_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:paddingRight="@dimen/margin"
+            android:paddingLeft="@dimen/margin"
+            android:weightSum="1">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginLeft="4dp"
+                android:layout_height="140dp">
+
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="132dp"
+                    android:layout_height="132dp"
+                    card_view:cardCornerRadius="6dp"
+                    android:elevation="10dp">
+
+                    <FrameLayout
+                        android:background="#DFE5E9"
+                        android:id="@+id/frame_layout_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/image_view_avatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_no_avatar"/>
+                    </FrameLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="12dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:inputType="textPersonName"
+                        android:hint="Họ"
+                        android:ems="10"
+                        android:id="@+id/edit_text_last_name" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:hint="Tên"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/edit_text_first_name" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.dangnhat.mycontact.ExpandedListView
+                android:id="@+id/list_view_phone"
+                android:layout_width="match_parent"
+                android:divider="@null"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_add_phone"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Thêm số điện thoại"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/text_add_phone"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+
+            <com.dangnhat.mycontact.ExpandedListView
+                android:id="@+id/list_view_email"
+                android:layout_width="match_parent"
+                android:divider="@null"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_add_email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Thêm email"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/text_add_email"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+
+            <com.dangnhat.mycontact.ExpandedListView
+                android:id="@+id/list_view_im"
+                android:layout_width="match_parent"
+                android:divider="@null"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_add_im"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Thêm mạng xã hội"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/text_add_im"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_group"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Các nhóm"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/text_group" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_layout_add_group"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_add_group" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_keyboard_arrow_down_black"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/imageView" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/cardview_dark_background"
+                android:layout_marginLeft="4dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="28dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

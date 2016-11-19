@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_contact"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:selectableItemBackground"
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="@dimen/margin"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check_box"
+        android:clickable="false"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/margin"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/margin"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/ic_no_avatar"
+        android:id="@+id/contact_avatar" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/contact_name"
+        android:layout_weight="1" />
+
+
+
+</LinearLayout>
